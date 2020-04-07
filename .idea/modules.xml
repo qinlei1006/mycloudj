@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/clientOne/clientOne.iml" filepath="$PROJECT_DIR$/clientOne/clientOne.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clientThree/clientThree.iml" filepath="$PROJECT_DIR$/clientThree/clientThree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clientTwo/clientTwo.iml" filepath="$PROJECT_DIR$/clientTwo/clientTwo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mycloudj.iml" filepath="$PROJECT_DIR$/mycloudj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/registerS/registerS.iml" filepath="$PROJECT_DIR$/registerS/registerS.iml" />
+    </modules>
+  </component>
+</project>
