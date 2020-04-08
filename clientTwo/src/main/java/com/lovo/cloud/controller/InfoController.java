@@ -65,7 +65,7 @@ public class InfoController {
     @RequestMapping("infoEntityPost")
     public InfoEntity infoEntityPost(@RequestBody  InfoEntity infoEntity){
         System.out.println(infoEntity.getInfo());
-        infoEntity.setInfo("我是后端服务器");
+        infoEntity.setInfo("后端服务器得到前端传来的 "+infoEntity.getInfo());
         return infoEntity;
     }
 

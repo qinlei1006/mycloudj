@@ -1,6 +1,7 @@
 package com.lovo.controller;
 
 import com.lovo.entity.InfoEntity;
+import com.lovo.service.api.InfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,10 @@ public class TestController {
     @Autowired
     private RestTemplate restTemplate;
 
+    // 注入本地远程调用
+    @Autowired
+    private InfoService infoService;
+
     /**
      *字符串
      * @param tag
@@ -24,6 +29,7 @@ public class TestController {
      */
     @RequestMapping("getInfo/{tag}")
     public String getInfo(@PathVariable("tag") int tag){
+        System.out.println(tag);
         //要访问的远程地址
         String url="http://clienttwo/infoString/"+tag;
         // 远程调用
@@ -87,5 +93,23 @@ public class TestController {
 
      }
 
+//      调用本地远程方法
+     @RequestMapping("getFeignString")
+     public String getFeignString(int tag){
+       String str = infoService.infoString(tag);
+        return str;
+     }
+
+     @RequestMapping("infoEntityPost")
+     public String infoEntityPost(){
+        InfoEntity infoEntity = new InfoEntity("赵云");
+         return  infoService.infoEntityPost(infoEntity).getInfo();
+
+     }
+
+     @RequestMapping("feignInfoEntityJson")
+     public String infoEntityJson(int tag){
+       return infoService.infoEntityJson(tag).getInfo();
+     }
 
 }

@@ -6,17 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="clientTwo" />
-        <module name="clientOne" />
         <module name="clientThree" />
-        <module name="registerspring" />
         <module name="registerS" />
+        <module name="configService" />
+        <module name="clientOne" />
+        <module name="clientTwo" />
+        <module name="registerspring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="clientOne" target="1.8" />
       <module name="clientThree" target="1.8" />
       <module name="clientTwo" target="1.8" />
+      <module name="configService" target="1.8" />
       <module name="mycloudj" target="1.8" />
       <module name="registerS" target="1.8" />
       <module name="registerspring" target="1.8" />
@@ -27,6 +29,7 @@
       <module name="clientOne" options="-parameters" />
       <module name="clientThree" options="-parameters" />
       <module name="clientTwo" options="-parameters" />
+      <module name="configService" options="-parameters" />
       <module name="mycloudj" options="-parameters" />
       <module name="registerS" options="-parameters" />
       <module name="registerspring" options="-parameters" />

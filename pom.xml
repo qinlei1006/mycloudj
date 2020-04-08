@@ -11,6 +11,7 @@
         <module>clientOne</module>
         <module>clientTwo</module>
         <module>clientThree</module>
+        <module>configService</module>
     </modules>
 
     <name>mycloudj</name>

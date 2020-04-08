@@ -1,13 +1,14 @@
 #服务器的端口号
 server:
-  port: 8004
+  port: 8001
 #服务器的名字
 spring:
   application:
-    name: clientOne
-eureka:
-  instance:
-    hostname: 127.0.0.1  #服务器的IP地址
-  client:
-    serviceUrl:    #注册服务器的地址
-      defaultZone: http://127.0.0.1:8008/eureka/
+    name: clientone
+    #从配置服务器去读取配置
+  cloud:
+    config:
+      profile: test  #配置服务器后缀
+      uri: http://127.0.0.1:8889/ #配置服务器地址
+
+
